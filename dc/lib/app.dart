@@ -8,10 +8,12 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
      return MaterialApp(
-    home: FriendsDetails();
-    home: HomePage();
-    home: LoginPage();
-    home: UserDetails();
+   //  title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+          primarySwatch: Colors.blue,
+          scaffoldBackgroundColor: Color(0XFFEFF3F6)),
+    home: LoginPage()
     );
   }
 }
