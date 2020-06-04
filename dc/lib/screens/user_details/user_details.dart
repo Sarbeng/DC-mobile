@@ -28,7 +28,7 @@ class UserDetails extends StatelessWidget {
               child: Center(
                 child: Text(
                   "USER DETAILS",
-                  style: TextStyle(fontSize: 30.0, fontFamily: 'HelveticaNeue'),
+                  style: TextStyle(fontSize: 25.0, fontFamily: 'HelveticaNeue'),
                 ),
               )),
           //Third container to place the Login Text Area

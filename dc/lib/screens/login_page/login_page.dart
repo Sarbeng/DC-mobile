@@ -28,7 +28,7 @@ class LoginPage extends StatelessWidget {
               child: Center(
                 child: Text(
                   "LOGIN",
-                  style: TextStyle(fontSize: 30.0, fontFamily: 'HelveticaNeue'),
+                  style: TextStyle(fontSize: 25.0, fontFamily: 'HelveticaNeue'),
                 ),
               )),
           //Third container to place the Login Text Area
