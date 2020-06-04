@@ -18,8 +18,8 @@ class UserDetails extends StatelessWidget {
                   top: Radius.circular(0), bottom: Radius.circular(100)),
             ),
             child: Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: Image.asset('assets/images/school.png'),
+              padding: const EdgeInsets.all(30.0),
+              child: Image.asset('assets/images/undraw_teacher.png',),
             ),
           ),
           //The second container contains the text for login
@@ -27,7 +27,7 @@ class UserDetails extends StatelessWidget {
               height: 75.0,
               child: Center(
                 child: Text(
-                  "LOGIN",
+                  "USER DETAILS",
                   style: TextStyle(fontSize: 30.0, fontFamily: 'HelveticaNeue'),
                 ),
               )),
@@ -59,41 +59,45 @@ class UserDetails extends StatelessWidget {
                 children: <Widget>[
                   TextField(
                     decoration: InputDecoration(
-                        hintText: "Index Number",
+                      prefixIcon: Icon(Icons.person_pin),
+                        hintText: "Username",
                         hintStyle: TextStyle(
                             fontSize: 20.0, fontFamily: 'HelveticaNeue')),
                   ),
+                  SizedBox(height:20),
                   TextField(
+                    obscureText:true,
                     decoration: InputDecoration(
-                        hintText: "Password",
+                        prefixIcon:Icon(Icons.local_phone),
+                        hintText: "Phone Number",
                         hintStyle: TextStyle(
-                            fontSize: 20.0, fontFamily: 'HelveticaNeue')),
+                            fontSize: 20.0, fontFamily: 'HelveticaNeue',),)
                   ),
                 ],
               ),
             ),
           ),
           //Fourth Container for button
+          SizedBox(height:30.0),
           Center(
-           child: Container(
-              width: 169.0,
-              height: 39.0,
-              padding: EdgeInsets.fromLTRB(5, 5, 5, 5),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(30.0),
-                color: const Color(0xff272d8d),
-                border: Border.all(width: 1.0, color: const Color(0xff707070)),
+            //child: MaterialButton(onPressed: null)
+           
+            child:MaterialButton(
+            onPressed: () {},
+            textColor: Colors.white,
+            //: const EdgeInsets.all(0.0),
+            
+            child: Container(
+              decoration: const BoxDecoration(
+                color: Color(0xFF272D8D),
+                borderRadius: BorderRadius.all(Radius.circular(30)),
               ),
-              child: Text(
-                'Login',
-                style: TextStyle(
-                    fontSize: 20.0,
-                    fontFamily: 'HelveticaNeue',
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white),
-                textAlign: TextAlign.center,
-              ),
+              padding: const EdgeInsets.fromLTRB(50, 10, 50, 10),
+              
+              child:
+                  const Text('Save', style: TextStyle(fontSize: 20,)),
             ),
+          ),
           ),
         ])));
   }

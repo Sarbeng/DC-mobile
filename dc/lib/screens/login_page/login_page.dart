@@ -59,12 +59,16 @@ class LoginPage extends StatelessWidget {
                 children: <Widget>[
                   TextField(
                     decoration: InputDecoration(
+                      prefixIcon: Icon(Icons.person_outline),
                         hintText: "Index Number",
                         hintStyle: TextStyle(
                             fontSize: 20.0, fontFamily: 'HelveticaNeue')),
                   ),
+                  SizedBox(height:20),
                   TextField(
+                    obscureText:true,
                     decoration: InputDecoration(
+                        prefixIcon: Icon(Icons.lock_outline),
                         hintText: "Password",
                         hintStyle: TextStyle(
                             fontSize: 20.0, fontFamily: 'HelveticaNeue')),
@@ -76,11 +80,24 @@ class LoginPage extends StatelessWidget {
           //Fourth Container for button
           SizedBox(height:30.0),
           Center(
-            
-            child: RaisedButton(onPressed: (){},
+            //child: MaterialButton(onPressed: null)
+           
+            child:MaterialButton(
+            onPressed: () {},
             textColor: Colors.white,
+            //: const EdgeInsets.all(0.0),
             
+            child: Container(
+              decoration: const BoxDecoration(
+                color: Color(0xFF272D8D),
+                borderRadius: BorderRadius.all(Radius.circular(30)),
+              ),
+              padding: const EdgeInsets.fromLTRB(50, 10, 50, 10),
+              
+              child:
+                  const Text('Login', style: TextStyle(fontSize: 20)),
             ),
+          ),
           ),
         ])));
   }
