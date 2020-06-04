@@ -4,10 +4,11 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
+        body: SingleChildScrollView(
+            child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
           //the first container contains the image and background of the top portion of the ui
           Container(
             height: 245.0,
@@ -23,7 +24,7 @@ class LoginPage extends StatelessWidget {
           ),
           //The second container contains the text for login
           Container(
-              height: 100.0,
+              height: 75.0,
               child: Center(
                 child: Text(
                   "LOGIN",
@@ -32,7 +33,6 @@ class LoginPage extends StatelessWidget {
               )),
           //Third container to place the Login Text Area
           Center(
-            
             child: Container(
               margin: const EdgeInsets.all(10.0),
               //color: Colors.amber[100],
@@ -56,19 +56,32 @@ class LoginPage extends StatelessWidget {
                   ]),
 
               child: Column(
-                
                 children: <Widget>[
-                 
-                  TextField(),
-                  TextField()
-
+                  TextField(
+                    decoration: InputDecoration(
+                        hintText: "Index Number",
+                        hintStyle: TextStyle(
+                            fontSize: 20.0, fontFamily: 'HelveticaNeue')),
+                  ),
+                  TextField(
+                    decoration: InputDecoration(
+                        hintText: "Password",
+                        hintStyle: TextStyle(
+                            fontSize: 20.0, fontFamily: 'HelveticaNeue')),
+                  ),
                 ],
-                
-               
-                )
-              ,
+              ),
             ),
-          )
-        ]));
+          ),
+          //Fourth Container for button
+          SizedBox(height:30.0),
+          Center(
+            
+            child: RaisedButton(onPressed: (){},
+            textColor: Colors.white,
+            
+            ),
+          ),
+        ])));
   }
 }
