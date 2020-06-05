@@ -6,8 +6,9 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         shape: ContinuousRectangleBorder(
-      borderRadius: BorderRadius.only(
-          bottomLeft: Radius.circular(30), bottomRight: Radius.circular(30))),
+            borderRadius: BorderRadius.only(
+                bottomLeft: Radius.circular(30),
+                bottomRight: Radius.circular(30))),
         backgroundColor: Color(0xFF272D8D),
         leading: IconButton(
           icon: Icon(Icons.menu),
@@ -34,7 +35,7 @@ class HomePage extends StatelessWidget {
                 border: Border.all(),
                 borderRadius: BorderRadius.circular(20),
               ),
-                 child: Row(
+              child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
                   Image.asset(
@@ -43,33 +44,52 @@ class HomePage extends StatelessWidget {
                   ),
                   Column(
                     children: <Widget>[
-                      SizedBox(height: 20,),
-                      
-                       Flexible(
-                        child: Text('Contact us for Medical' ,style: TextStyle(fontSize:16,fontFamily: 'HelveticaNeue',fontWeight: FontWeight.bold,letterSpacing: 1),),
+                      SizedBox(
+                        height: 20,
                       ),
-                      Flexible(child: Text('Emergency Services',style: TextStyle(fontSize:16,fontFamily:'HelveticaNeue',fontWeight: FontWeight.bold,letterSpacing: 1),),),
-                      SizedBox(height:20),
-    
-                       MaterialButton(
+                      Flexible(
+                        child: Text(
+                          'Contact us for Medical',
+                          style: TextStyle(
+                              fontSize: 16,
+                              fontFamily: 'HelveticaNeue',
+                              fontWeight: FontWeight.bold,
+                              letterSpacing: 1),
+                        ),
+                      ),
+                      Flexible(
+                        child: Text(
+                          'Emergency Services',
+                          style: TextStyle(
+                              fontSize: 16,
+                              fontFamily: 'HelveticaNeue',
+                              fontWeight: FontWeight.bold,
+                              letterSpacing: 1),
+                        ),
+                      ),
+                      SizedBox(height: 20),
+                      MaterialButton(
                         onPressed: () {},
                         textColor: Colors.white,
-                          //: const EdgeInsets.all(0.0),
-            
-            child: Container(
-              decoration: const BoxDecoration(
-                color: Color(0xFF272D8D),
-                borderRadius: BorderRadius.all(Radius.circular(30)),
-              ),
-              padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
-              
-              child:
-                  const Text('Contact Us', style: TextStyle(fontSize: 17,fontFamily: 'HelveticaNeue',fontWeight: FontWeight.bold,letterSpacing: 1)),
-            ),
+                        //: const EdgeInsets.all(0.0),
+
+                        child: Container(
+                          decoration: const BoxDecoration(
+                            color: Color(0xFF272D8D),
+                            borderRadius: BorderRadius.all(Radius.circular(30)),
+                          ),
+                          padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+                          child: const Text('Contact Us',
+                              style: TextStyle(
+                                  fontSize: 17,
+                                  fontFamily: 'HelveticaNeue',
+                                  fontWeight: FontWeight.bold,
+                                  letterSpacing: 1)),
+                        ),
                       )
                     ],
-                     
-                  )],
+                  )
+                ],
               ),
             )),
             SizedBox(
@@ -98,33 +118,53 @@ class HomePage extends StatelessWidget {
                   ),
                   Column(
                     children: <Widget>[
-                      SizedBox(height: 20,),
-                      
-                       Flexible(
-                        child: Text('Contact us for Fire' ,style: TextStyle(fontSize:16,fontFamily: 'HelveticaNeue',fontWeight: FontWeight.bold,letterSpacing: 1,wordSpacing: 3),),
+                      SizedBox(
+                        height: 20,
                       ),
-                      Flexible(child: Text('Emergency Services',style: TextStyle(fontSize:16,fontFamily:'HelveticaNeue',fontWeight: FontWeight.bold,letterSpacing: 1),),),
-                      SizedBox(height:20),
-    
-                       MaterialButton(
+                      Flexible(
+                        child: Text(
+                          'Contact us for Fire',
+                          style: TextStyle(
+                              fontSize: 16,
+                              fontFamily: 'HelveticaNeue',
+                              fontWeight: FontWeight.bold,
+                              letterSpacing: 1,
+                              wordSpacing: 3),
+                        ),
+                      ),
+                      Flexible(
+                        child: Text(
+                          'Emergency Services',
+                          style: TextStyle(
+                              fontSize: 16,
+                              fontFamily: 'HelveticaNeue',
+                              fontWeight: FontWeight.bold,
+                              letterSpacing: 1),
+                        ),
+                      ),
+                      SizedBox(height: 20),
+                      MaterialButton(
                         onPressed: () {},
                         textColor: Colors.white,
-                          //: const EdgeInsets.all(0.0),
-            
-            child: Container(
-              decoration: const BoxDecoration(
-                color: Color(0xFF272D8D),
-                borderRadius: BorderRadius.all(Radius.circular(30)),
-              ),
-              padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
-              
-              child:
-                  const Text('Contact Us', style: TextStyle(fontSize: 17,fontFamily: 'HelveticaNeue',fontWeight: FontWeight.bold,letterSpacing: 1)),
-            ),
+                        //: const EdgeInsets.all(0.0),
+
+                        child: Container(
+                          decoration: const BoxDecoration(
+                            color: Color(0xFF272D8D),
+                            borderRadius: BorderRadius.all(Radius.circular(30)),
+                          ),
+                          padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+                          child: const Text('Contact Us',
+                              style: TextStyle(
+                                  fontSize: 17,
+                                  fontFamily: 'HelveticaNeue',
+                                  fontWeight: FontWeight.bold,
+                                  letterSpacing: 1)),
+                        ),
                       )
                     ],
-                     
-                  )],
+                  )
+                ],
               ),
             )),
             SizedBox(height: 30),
@@ -138,46 +178,108 @@ class HomePage extends StatelessWidget {
                 decoration: BoxDecoration(
                     border: Border.all(),
                     borderRadius: BorderRadius.circular(20)),
-                       child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: <Widget>[
-                  Image.asset(
-                    'assets/images/police.png',
-                    height: 80,
-                  ),
-                  Column(
-                    children: <Widget>[
-                      SizedBox(height: 20,),
-                      
-                       Flexible(
-                        child: Text('Contact us for Security' ,style: TextStyle(fontSize:16,fontFamily: 'HelveticaNeue',fontWeight: FontWeight.bold,letterSpacing: 1),),
-                      ),
-                      Flexible(child: Text('Emergency Services',style: TextStyle(fontSize:16,fontFamily:'HelveticaNeue',fontWeight: FontWeight.bold,letterSpacing: 1),),),
-                      SizedBox(height:20),
-    
-                       MaterialButton(
-                        onPressed: () {},
-                        textColor: Colors.white,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: <Widget>[
+                    Image.asset(
+                      'assets/images/police.png',
+                      height: 80,
+                    ),
+                    Column(
+                      children: <Widget>[
+                        SizedBox(
+                          height: 20,
+                        ),
+                        Flexible(
+                          child: Text(
+                            'Contact us for Security',
+                            style: TextStyle(
+                                fontSize: 16,
+                                fontFamily: 'HelveticaNeue',
+                                fontWeight: FontWeight.bold,
+                                letterSpacing: 1),
+                          ),
+                        ),
+                        Flexible(
+                          child: Text(
+                            'Emergency Services',
+                            style: TextStyle(
+                                fontSize: 16,
+                                fontFamily: 'HelveticaNeue',
+                                fontWeight: FontWeight.bold,
+                                letterSpacing: 1),
+                          ),
+                        ),
+                        SizedBox(height: 20),
+                        MaterialButton(
+                          onPressed: () {},
+                          textColor: Colors.white,
                           //: const EdgeInsets.all(0.0),
-            
-            child: Container(
-              decoration: const BoxDecoration(
-                color: Color(0xFF272D8D),
-                borderRadius: BorderRadius.all(Radius.circular(30)),
-              ),
-              padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
-              
-              child:
-                  const Text('Contact Us', style: TextStyle(fontSize: 17,fontFamily: 'HelveticaNeue',fontWeight: FontWeight.bold,letterSpacing: 1)),
-            ),
-                      )
-                    ],
-                     
-                  )],
-              ),
+
+                          child: Container(
+                            decoration: const BoxDecoration(
+                              color: Color(0xFF272D8D),
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(30)),
+                            ),
+                            padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+                            child: const Text('Contact Us',
+                                style: TextStyle(
+                                    fontSize: 17,
+                                    fontFamily: 'HelveticaNeue',
+                                    fontWeight: FontWeight.bold,
+                                    letterSpacing: 1)),
+                          ),
+                        )
+                      ],
+                    )
+                  ],
+                ),
               ),
             ),
           ]),
+      bottomNavigationBar: BottomAppBar(
+        child: new Row(
+          mainAxisSize: MainAxisSize.max,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: <Widget>[
+            //  IconButton(icon: Icon(Icons.menu), onPressed: () {},),
+            //  IconButton(icon: Icon(Icons.search), onPressed: () {},),
+            Container(
+                padding: const EdgeInsets.fromLTRB(44, 10, 45, 10),
+                decoration: BoxDecoration(
+                    border: Border.all(),
+                    borderRadius: BorderRadius.vertical(
+                        top: Radius.circular(10), bottom: Radius.circular(0))),
+                child: Image.asset(
+                  'assets/images/female.png',
+                  height: 30,
+                )),
+            Container(
+              padding: const EdgeInsets.fromLTRB(40, 10, 40, 10),
+              decoration: BoxDecoration(
+                  border: Border.all(),
+                  borderRadius: BorderRadius.vertical(
+                      top: Radius.circular(10), bottom: Radius.circular(0))),
+              child: Image.asset(
+                'assets/images/home.png',
+                height: 30,
+              ),
+            ),
+            Container(
+              padding: const EdgeInsets.fromLTRB(40, 10, 30, 10),
+              decoration: BoxDecoration(
+                  border: Border.all(),
+                  borderRadius: BorderRadius.vertical(
+                      top: Radius.circular(10), bottom: Radius.circular(0))),
+              child: Image.asset(
+                'assets/images/users.png',
+                height: 30,
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
