@@ -4,6 +4,11 @@ class FriendsDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        leading: Icon(Icons.arrow_back),
+        backgroundColor: Color(0xFF272D8D),
+        title: Text('Friends Details',style: TextStyle(fontFamily:'HelveticaNeue',fontWeight:FontWeight.bold,letterSpacing:2),),
+      ),
         body: SingleChildScrollView(
             child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
@@ -22,15 +27,16 @@ class FriendsDetails extends StatelessWidget {
               child: Image.asset('assets/images/user_group.png',),
             ),
           ),
+          SizedBox(height:15),
           //The second container contains the text for login
-          Container(
-              height: 75.0,
-              child: Center(
-                child: Text(
-                  "FRIENDS DETAILS",
-                  style: TextStyle(fontSize: 25.0, fontFamily: 'HelveticaNeue'),
-                ),
-              )),
+          // Container(
+          //     height: 75.0,
+          //     child: Center(
+          //       child: Text(
+          //         "FRIENDS DETAILS",
+          //         style: TextStyle(fontSize: 25.0, fontFamily: 'HelveticaNeue'),
+          //       ),
+          //     )),
           //Third container to place the Login Text Area
           Center(
             child: Container(
@@ -64,7 +70,7 @@ class FriendsDetails extends StatelessWidget {
                         hintStyle: TextStyle(
                             fontSize: 20.0, fontFamily: 'HelveticaNeue')),
                   ),
-                  SizedBox(height:20),
+                  SizedBox(height:16),
                   TextField(
                     obscureText:true,
                     decoration: InputDecoration(
@@ -91,7 +97,7 @@ class FriendsDetails extends StatelessWidget {
             ),
           ),
           //Fourth Container for button
-          SizedBox(height:30.0),
+          SizedBox(height:20.0),
           Center(
             //child: MaterialButton(onPressed: null)
            
