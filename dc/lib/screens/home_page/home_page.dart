@@ -141,16 +141,21 @@ class HomePage extends StatelessWidget {
         // title: Text(''),
       ),
       body: Column(
+        
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
+          children: <Widget>[
             //Padding(padding: const EdgeInsets.fromLTRB(20,30,30,30)),
             SizedBox(
               height: 20,
             ),
             //first Container
-            Center(
+            Expanded(child:Center(
                 child: Container(
+                  margin: new EdgeInsets.symmetric(
+              // vertical: 20.0,
+              horizontal: 10.0
+              ),
               constraints: BoxConstraints(
                 maxHeight: 141,
                 maxWidth: 363,
@@ -217,13 +222,20 @@ class HomePage extends StatelessWidget {
                   )
                 ],
               ),
-            )),
+            )), ),
+            
             SizedBox(
               height: 30,
             ),
             //Second container
+            
+           Expanded(child: 
             Center(
                 child: Container(
+               margin: new EdgeInsets.symmetric(
+              // vertical: 20.0,
+              horizontal: 10.0
+              ),
               height: 141,
               width: 363,
               // constraints: BoxConstraints(
@@ -294,11 +306,15 @@ class HomePage extends StatelessWidget {
                   )
                 ],
               ),
-            )),
+            )),),
             SizedBox(height: 30),
             //3rdContainer
-            Center(
+            Expanded(child: Center(
               child: Container(
+                margin: new EdgeInsets.symmetric(
+              // vertical: 20.0,
+              horizontal: 10.0
+              ),
                 constraints: BoxConstraints(
                   maxHeight: 141,
                   maxWidth: 363,
@@ -366,16 +382,18 @@ class HomePage extends StatelessWidget {
                   ],
                 ),
               ),
-            ),
+            ),)
+           
           ]),
       bottomNavigationBar: BottomAppBar(
         child: new Row(
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          
           children: <Widget>[
             //  IconButton(icon: Icon(Icons.menu), onPressed: () {},),
             //  IconButton(icon: Icon(Icons.search), onPressed: () {},),
-            Container(
+             Expanded(child:  Container(
                 padding: const EdgeInsets.fromLTRB(44, 10, 45, 10),
                 decoration: BoxDecoration(
                     border: Border.all(),
@@ -384,7 +402,8 @@ class HomePage extends StatelessWidget {
                 child: Image.asset(
                   'assets/images/female.png',
                   height: 30,
-                )),
+                )),),
+            
             Container(
               padding: const EdgeInsets.fromLTRB(40, 10, 40, 10),
               decoration: BoxDecoration(
