@@ -1,6 +1,130 @@
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
+  TextEditingController customController = TextEditingController();
+  //Popup dialog box
+  createAlertBox(BuildContext context) {
+    return showDialog(
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+          shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.all(Radius.circular(32.0))),
+
+          //title: Text("Alert Dialog"),
+          content: Container(
+            //padding: MediaQuery.of(context).viewInsets + const EdgeInsets.symmetric(horizontal: 0.0, vertical: 24.0),
+            height: 100,
+            //width: 363,
+            decoration: BoxDecoration(
+                //borderRadius: BorderRadius.all(Radius.circular(30)),
+                ),
+            child: Center(
+                child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: <Widget>[
+                  Image.asset(
+                    'assets/images/question.png',
+                    height: 80,
+                  ),
+                  Column(
+                    children: <Widget>[
+                      SizedBox(
+                        height: 20,
+                      ),
+                      Flexible(
+                        child: Text(
+                          'Are you sure you want to',
+                          style: TextStyle(
+                            fontSize: 16,
+                            fontFamily: 'HelveticaNeue',
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                      Flexible(
+                        child: Text(
+                          'Contact Emergency Services?',
+                          style: TextStyle(
+                            fontSize: 14,
+                            fontFamily: 'HelveticaNeue',
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                      Container(
+                        child: 
+                          Expanded(child: Row(
+                            children: <Widget>[
+                          Center(
+                              child: MaterialButton(
+                            onPressed: () {
+                              Navigator.of(context).pop();
+                            },
+                            textColor: Colors.white,
+                            //: const EdgeInsets.all(0.0),
+
+                            child: Container(
+                              decoration: const BoxDecoration(
+                                color: Color(0xFFCB0303),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(30)),
+                              ),
+                              padding: const EdgeInsets.fromLTRB(12, 6, 12, 6),
+                              child: const Text('Decline',
+                                  style: TextStyle(
+                                      fontSize: 10,
+                                      fontFamily: 'HelveticaNeue',
+                                      fontWeight: FontWeight.bold,
+                                      letterSpacing: 1)),
+                            ),
+                          )),
+                          SizedBox(height:20),
+                          Center(
+                              child: MaterialButton(
+                            onPressed: () {
+                              Navigator.of(context).pop();
+                            },
+                            textColor: Colors.white,
+                            //: const EdgeInsets.all(0.0),
+
+                            child: Container(
+                              decoration: const BoxDecoration(
+                                color: Color(0xFF272D8D),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(30)),
+                              ),
+                              padding: const EdgeInsets.fromLTRB(12, 6, 12, 6),
+                              child: const Text('Confirm',
+                                  style: TextStyle(
+                                      fontSize: 10,
+                                      fontFamily: 'HelveticaNeue',
+                                      fontWeight: FontWeight.bold,
+                                      letterSpacing: 1)),
+                            ),
+                          ))
+                            ]
+                          )),
+                      )
+                       ],
+                      ),
+                    ],
+                  )
+                ),
+          ),
+          // actions: [
+          //   FlatButton(
+          //     child: Text("Close"),
+          //     onPressed: () {
+          //       Navigator.of(context).pop();
+          //     },
+          //   )
+          // ],
+        );
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,7 +146,7 @@ class HomePage extends StatelessWidget {
           children: [
             //Padding(padding: const EdgeInsets.fromLTRB(20,30,30,30)),
             SizedBox(
-              height: 40,
+              height: 20,
             ),
             //first Container
             Center(
@@ -69,7 +193,9 @@ class HomePage extends StatelessWidget {
                       ),
                       SizedBox(height: 20),
                       MaterialButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          createAlertBox(context);
+                        },
                         textColor: Colors.white,
                         //: const EdgeInsets.all(0.0),
 
@@ -144,7 +270,9 @@ class HomePage extends StatelessWidget {
                       ),
                       SizedBox(height: 20),
                       MaterialButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          createAlertBox(context);
+                        },
                         textColor: Colors.white,
                         //: const EdgeInsets.all(0.0),
 
@@ -212,7 +340,9 @@ class HomePage extends StatelessWidget {
                         ),
                         SizedBox(height: 20),
                         MaterialButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            createAlertBox(context);
+                          },
                           textColor: Colors.white,
                           //: const EdgeInsets.all(0.0),
 
