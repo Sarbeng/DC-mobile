@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_grid/responsive_grid.dart';
 
-class HomePage extends StatelessWidget {
+class Res extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,23 +19,42 @@ class HomePage extends StatelessWidget {
       ),
 
       
-      body: SingleChildScrollView( child: Column(
-        
-        
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: <Widget>[
-            //Padding(padding: const EdgeInsets.fromLTRB(20,30,30,30)),
-            SizedBox(
-              height: 20,
+      body: SingleChildScrollView(child:  ResponsiveGridRow(
+          children: [
+              ResponsiveGridCol(
+              xs: 12,
+              md: 1,
+              child: Container(
+                height: 30,
+                alignment: Alignment(0, 0),
+                //color: Colors.green,
+                // child:  Image.asset(
+                //     'assets/images/firefighter.png',
+                //     height: 80,
+                //   ),
+              ),
             ),
-            //first Container
-           
-            Container(child:Center(
+
+            ResponsiveGridCol(
+              xs: 1,
+              child: Row(
+                
+                
+              ),
+              ),
+
+             ResponsiveGridCol(
+              xs: 10,
+              
+              // md: 6, 
+              child: Container(
+                //  height: 200,
+                alignment: Alignment(0, 0),
+                child:Center(
                 child: Container(
                   margin: new EdgeInsets.symmetric(
               // vertical: 20.0,
-              horizontal: 10.0
+              // horizontal: 10.0
               ),
               constraints: BoxConstraints(
                 maxHeight: 141,
@@ -101,35 +120,73 @@ class HomePage extends StatelessWidget {
                   )
                 ],
               ),
-            )), ),
-            
-            SizedBox(
-              height: 20,
-            ),
-            //Second container
-            
-           Container(child: 
-            Center(
-                child: Container(
-               margin: new EdgeInsets.symmetric(
-              // vertical: 20.0,
-              horizontal: 10.0
+            )),
+                // color: Colors.purple,
+                // child: Text("lg : 12"),
+                
               ),
-              height: 141,
-              width: 363,
-              // constraints: BoxConstraints(
-              //   maxHeight: 141,
-              //   max,
-              // ),
-              decoration: BoxDecoration(
-                  border: Border.all(),
-                  borderRadius: BorderRadius.circular(20)),
+            ),
+           
+            
 
-              //flex:2,
+          ResponsiveGridCol(
+              xs: 1,
+              child: Row(
+                children:<Widget>[
+
+                ]
+              ),
+              ),
+
+  ResponsiveGridCol(
+              xs: 12,
+              md: 1,
+              child: Container(
+                height: 30,
+                alignment: Alignment(0, 0),
+                //color: Colors.green,
+                // child:  Image.asset(
+                //     'assets/images/firefighter.png',
+                //     height: 80,
+                //   ),
+              ),
+            ),
+
+
+
+            ResponsiveGridCol(
+              xs: 1,
+              child: Row(
+                children:<Widget>[
+
+                ]
+              ),
+              ),
+
+             ResponsiveGridCol(
+              xs: 10,
+              
+              // md: 6, 
+              child: Container(
+                //  height: 200,
+                alignment: Alignment(0, 0),
+                child:Center(
+                child: Container(
+                  margin: new EdgeInsets.symmetric(
+              // vertical: 20.0,
+              // horizontal: 10.0
+              ),
+              constraints: BoxConstraints(
+                maxHeight: 141,
+                maxWidth: 363,
+              ),
+              decoration: BoxDecoration(
+                border: Border.all(),
+                borderRadius: BorderRadius.circular(20),
+              ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
-                  
                   Image.asset(
                     'assets/images/firefighter.png',
                     height: 80,
@@ -184,26 +241,72 @@ class HomePage extends StatelessWidget {
                   )
                 ],
               ),
-            )),),
-            SizedBox(height: 20),
-            //3rdContainer
-            Container(child: Center(
-              child: Container(
-                margin: new EdgeInsets.symmetric(
-              // vertical: 0.0,
-              horizontal: 10.0
+            )),
+                // color: Colors.purple,
+                // child: Text("lg : 12"),
+                
               ),
-                constraints: BoxConstraints(
-                  maxHeight: 141,
-                  maxWidth: 363,
-                ),
-                decoration: BoxDecoration(
-                    border: Border.all(),
-                    borderRadius: BorderRadius.circular(20)),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: <Widget>[
-                    Image.asset(
+            ),
+
+
+            ResponsiveGridCol(
+              xs: 1,
+              child: Row(
+                children:<Widget>[
+
+                ]
+              ),
+              ),
+
+
+   ResponsiveGridCol(
+              xs: 12,
+              md: 1,
+              child: Container(
+                height: 30,
+                alignment: Alignment(0, 0),
+                //color: Colors.green,
+                // child:  Image.asset(
+                //     'assets/images/firefighter.png',
+                //     height: 80,
+                //   ),
+              ),
+            ),
+
+              ResponsiveGridCol(
+              xs: 1,
+              child: Row(
+                children:<Widget>[
+
+                ]
+              ),
+              ),
+
+             ResponsiveGridCol(
+              xs: 10,
+              
+              // md: 6, 
+              child: Container(
+                 //height: 200,
+                alignment: Alignment(0, 0),
+                child:Center(
+                child: Container(
+                  margin: new EdgeInsets.symmetric(
+              // vertical: 20.0,
+              // horizontal: 10.0
+              ),
+              constraints: BoxConstraints(
+                maxHeight: 141,
+                maxWidth: 363,
+              ),
+              decoration: BoxDecoration(
+                border: Border.all(),
+                borderRadius: BorderRadius.circular(20),
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: <Widget>[
+                  Image.asset(
                       'assets/images/police.png',
                       height: 80,
                     ),
@@ -230,40 +333,116 @@ class HomePage extends StatelessWidget {
                                 fontFamily: 'HelveticaNeue',
                                 fontWeight: FontWeight.bold,
                                 letterSpacing: 1),
-                          ),
                         ),
-                        SizedBox(height: 20),
-                        MaterialButton(
-                          onPressed: () {},
-                          textColor: Colors.white,
-                          //: const EdgeInsets.all(0.0),
+                      ),
+                      SizedBox(height: 20),
+                      MaterialButton(
+                        onPressed: () {},
+                        textColor: Colors.white,
+                        //: const EdgeInsets.all(0.0),
 
-                          child: Container(
-                            decoration: const BoxDecoration(
-                              color: Color(0xFF272D8D),
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(30)),
-                            ),
-                            padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
-                            child: const Text('Contact Us',
-                                style: TextStyle(
-                                    fontSize: 17,
-                                    fontFamily: 'HelveticaNeue',
-                                    fontWeight: FontWeight.bold,
-                                    letterSpacing: 1)),
+                        child: Container(
+                          decoration: const BoxDecoration(
+                            color: Color(0xFF272D8D),
+                            borderRadius: BorderRadius.all(Radius.circular(30)),
                           ),
-                        )
-                      ],
-                    )
-                  ],
-                ),
+                          padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+                          child: const Text('Contact Us',
+                              style: TextStyle(
+                                  fontSize: 17,
+                                  fontFamily: 'HelveticaNeue',
+                                  fontWeight: FontWeight.bold,
+                                  letterSpacing: 1)),
+                        ),
+                      )
+                    ],
+                  )
+                ],
               ),
-            ),)
-           
-          ])
+            )),
+                // color: Colors.purple,
+                // child: Text("lg : 12"),
+                
+              ),
+            ),
 
-      ) ,
-      bottomNavigationBar: BottomAppBar(
+
+            // ResponsiveGridCol(
+            //   xs: 1,
+            //   child: Row(
+            //     children:<Widget>[
+
+            //     ]
+            //   ),
+            //   ),
+
+
+
+
+
+
+            // ResponsiveGridCol(
+            //   xs: 12,
+              
+            //   // md: 6, 
+            //   child: Row(
+            //     children:<Widget>[
+
+            //     ]
+            //   ),
+                
+            //     // alignment: Alignment(0, 0),
+            //     // color: Colors.purple,
+            //     // child: Text("lg : 12"),
+            //   ),
+            
+            
+            
+            // ResponsiveGridCol(
+            //   xs: 6,
+            //   md: 1,
+            //   child: Container(
+            //     height: 50,
+            //     alignment: Alignment(0, 0),
+            //     color: Colors.green,
+            //     child:  Image.asset(
+            //         'assets/images/firefighter.png',
+            //         height: 80,
+            //       ),
+            //   ),
+            // ),
+            // ResponsiveGridCol(
+            //   xs: 6,
+            //   md: 3,
+            //   child: Container(
+            //     height: 50,
+            //     alignment: Alignment(0, 0),
+            //     color: Colors.orange,
+            //     child: Text("xs : 6 \r\nmd : 3"),
+            //   ),
+            // ),
+            // ResponsiveGridCol(
+            //   xs: 6,
+            //   md: 3,
+            //   child: Container(
+            //     height: 100,
+            //     alignment: Alignment(0, 0),
+            //     color: Colors.red,
+            //     child: Text("xs : 6 \r\nmd : 3"),
+            //   ),
+            // ),
+            // ResponsiveGridCol(
+            //   xs: 6,
+            //   md: 3,
+            //   child: Container(
+            //     height: 100,
+            //     alignment: Alignment(0, 0),
+            //     color: Colors.blue,
+            //     child: Text("xs : 6 \r\nmd : 3"),
+            //   ),
+            // ),
+           ] ),),
+        bottomNavigationBar: BottomAppBar(
         child: new Row(
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -307,6 +486,7 @@ class HomePage extends StatelessWidget {
           ],
         ),
       ),
-    );
-  }
-}
+      );
+      
+      
+      }}

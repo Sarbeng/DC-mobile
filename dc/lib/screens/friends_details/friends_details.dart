@@ -16,7 +16,7 @@ class FriendsDetails extends StatelessWidget {
                 children: [
           //the first container contains the image and background of the top portion of the ui
           Container(
-            height: 245.0,
+            height: 200.0,
             decoration: BoxDecoration(
               color: Color(0xFF272D8D),
               borderRadius: BorderRadius.vertical(
