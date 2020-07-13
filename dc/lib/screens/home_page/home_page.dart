@@ -1,5 +1,7 @@
+import 'package:dc/screens/user_details/user_details.dart';
 import 'package:flutter/material.dart';
-import 'package:responsive_grid/responsive_grid.dart';
+//import 'package:responsive_grid/responsive_grid.dart';
+
 
 class HomePage extends StatelessWidget {
   @override
@@ -293,7 +295,13 @@ class HomePage extends StatelessWidget {
                 height: 30,
               ),
             ),),
-          Expanded( child:  Container(
+         InkWell(
+           //onTap: UserDetails(),
+ child:FlatButton( 
+   onPressed: (){
+
+   },
+   child:  Container(
               padding: const EdgeInsets.fromLTRB(25, 10, 25, 10),
               decoration: BoxDecoration(
                   border: Border.all(),
@@ -303,7 +311,9 @@ class HomePage extends StatelessWidget {
                 'assets/images/users.png',
                 height: 30,
               ),
-            ),),
+            ),)
+         ),
+         
           ],
         ),
       ),

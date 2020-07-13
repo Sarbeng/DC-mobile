@@ -1,3 +1,5 @@
+import 'package:dc/screens/friends_details/friends_details.dart';
+import 'package:dc/screens/user_details/user_details.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_grid/responsive_grid.dart';
 
@@ -456,10 +458,19 @@ class Res extends StatelessWidget {
                     border: Border.all(),
                     borderRadius: BorderRadius.vertical(
                         top: Radius.circular(10), bottom: Radius.circular(0))),
-                child: Image.asset(
+                child:FlatButton(onPressed: (){
+Navigator.push(
+    context,
+    MaterialPageRoute(builder: (context) => UserDetails()),
+  );
+                }, 
+                child:  Image.asset(
                   'assets/images/female.png',
                   height: 30,
-                )),),
+                )
+                )
+                ),
+                ),
             
             Expanded(child: Container(
               padding: const EdgeInsets.fromLTRB(30, 10, 30, 10),
@@ -467,10 +478,17 @@ class Res extends StatelessWidget {
                   border: Border.all(),
                   borderRadius: BorderRadius.vertical(
                       top: Radius.circular(10), bottom: Radius.circular(0))),
-              child: Image.asset(
+              child: FlatButton(onPressed: (){
+Navigator.push(
+    context,
+    MaterialPageRoute(builder: (context) => Res()),
+  );
+              }, 
+              child:Image.asset(
                 'assets/images/home.png',
                 height: 30,
-              ),
+              ), 
+              )
             ),),
           Expanded( child:  Container(
               padding: const EdgeInsets.fromLTRB(25, 10, 25, 10),
@@ -478,10 +496,16 @@ class Res extends StatelessWidget {
                   border: Border.all(),
                   borderRadius: BorderRadius.vertical(
                       top: Radius.circular(10), bottom: Radius.circular(0))),
+              child:FlatButton(onPressed:(){
+Navigator.push(
+    context,
+    MaterialPageRoute(builder: (context) => FriendsDetails()),
+  );
+              }, 
               child: Image.asset(
                 'assets/images/users.png',
                 height: 30,
-              ),
+              ),)
             ),),
           ],
         ),

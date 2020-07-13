@@ -1,4 +1,8 @@
+import 'package:dc/screens/home_page/home_page.dart';
 import 'package:flutter/material.dart';
+import '../home_page/home_page.dart';
+import '../user_details/responsive.dart';
+
 
 class LoginPage extends StatelessWidget {
   @override
@@ -83,7 +87,12 @@ class LoginPage extends StatelessWidget {
             //child: MaterialButton(onPressed: null)
            
             child:MaterialButton(
-            onPressed: () {},
+            onPressed: () {
+ Navigator.push(
+    context,
+    MaterialPageRoute(builder: (context) => Res()),
+  );
+            },
             textColor: Colors.white,
             //: const EdgeInsets.all(0.0),
             

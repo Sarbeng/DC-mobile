@@ -4,6 +4,17 @@ class UserDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+            appBar: AppBar(
+         leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
+        backgroundColor: Color(0xFF272D8D),
+        title: Text('User Details',style: TextStyle(fontFamily:'HelveticaNeue',fontWeight:FontWeight.bold,letterSpacing:2),),
+      ),
+     
         body: SingleChildScrollView(
             child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
@@ -19,19 +30,20 @@ class UserDetails extends StatelessWidget {
             ),
             child: Padding(
               padding: const EdgeInsets.all(30.0),
-              child: Image.asset('assets/images/undraw_teacher.png',),
+              child: Image.asset('assets/images/undraw_teacher.png',height: 20,),
             ),
           ),
           //The second container contains the text for login
-          Container(
-              height: 75.0,
-              child: Center(
-                child: Text(
-                  "USER DETAILS",
-                  style: TextStyle(fontSize: 25.0, fontFamily: 'HelveticaNeue'),
-                ),
-              )),
+          // Container(
+          //     height: 75.0,
+          //     child: Center(
+          //       child: Text(
+          //         "USER DETAILS",
+          //         style: TextStyle(fontSize: 25.0, fontFamily: 'HelveticaNeue'),
+          //       ),
+          //     )),
           //Third container to place the Login Text Area
+          SizedBox(height:20),
           Center(
             child: Container(
               margin: const EdgeInsets.all(10.0),
@@ -83,7 +95,9 @@ class UserDetails extends StatelessWidget {
             //child: MaterialButton(onPressed: null)
            
             child:MaterialButton(
-            onPressed: () {},
+            onPressed: () {
+               Navigator.pop(context);
+            },
             textColor: Colors.white,
             //: const EdgeInsets.all(0.0),
             

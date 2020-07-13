@@ -5,7 +5,12 @@ class FriendsDetails extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: Icon(Icons.arrow_back),
+         leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
         backgroundColor: Color(0xFF272D8D),
         title: Text('Friends Details',style: TextStyle(fontFamily:'HelveticaNeue',fontWeight:FontWeight.bold,letterSpacing:2),),
       ),
@@ -102,7 +107,9 @@ class FriendsDetails extends StatelessWidget {
             //child: MaterialButton(onPressed: null)
            
             child:MaterialButton(
-            onPressed: () {},
+            onPressed: () {
+               Navigator.pop(context);
+            },
             textColor: Colors.white,
             //: const EdgeInsets.all(0.0),
             
